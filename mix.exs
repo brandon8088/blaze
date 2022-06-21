@@ -6,7 +6,7 @@ defmodule Blaze.MixProject do
       app: :blaze,
       description: "A friendlier interface to Google Cloud Firestore.",
       version: "0.1.0",
-      elixir: "~> 1.10",
+      elixir: "~> 1.13.4",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
@@ -24,8 +24,8 @@ defmodule Blaze.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:google_api_firestore, "~> 0.16"},
-      {:ex_doc, "~> 0.21", only: :dev, runtime: false},
+      {:google_api_firestore, "~> 0.21"},
+      {:ex_doc, "~> 0.24", only: :dev, runtime: false},
     ]
   end
 
