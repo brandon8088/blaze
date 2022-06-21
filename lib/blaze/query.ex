@@ -216,7 +216,7 @@ defmodule Blaze.Query do
   Creates a `Filter` model with the `fieldFilter` attribute set.
   """
   @spec field_filter(binary, binary, term) :: Filter.t
-  def field_filter(operator, field, value) when is_binary(operator) and is_binary(field) do
+  def field_filter(operator, field, value) when is_binary(operator) and is_atom(field) do
     %Filter{
       fieldFilter: %FieldFilter{
         op: operator,
